@@ -2,3 +2,4 @@
 /config.properties
 /email_template.properties
 /testcase/
+/log4j.properties
