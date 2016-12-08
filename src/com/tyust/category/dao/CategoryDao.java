@@ -38,10 +38,10 @@ public class CategoryDao {
 	}
 	
 	public List<Category> findAll() throws SQLException{
-		String sql = "select * from t_category where pid is null order by orderBy";
+		/*String sql = "select * from t_category where pid is null order by orderBy";
 		List<Map<String, Object>> mapList = qr.query(sql, new MapListHandler());
-		List<Category> parents = toCategoryList(mapList);
-		
+		List<Category> parents = toCategoryList(mapList);*/
+		List<Category> parents = findParent();
 		for(Category parent : parents){
 			List<Category> children = findByParent(parent.getCid());
 			parent.setChildren(children);
