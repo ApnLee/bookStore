@@ -8,7 +8,7 @@
 <!--
 	<link rel="stylesheet" type="text/css" href="styles.css">
 	-->
-<link rel="stylesheet" type="text/css" href="/yosebook/adminjsps/admin/css/category/add_edit.css">
+<link rel="stylesheet" type="text/css" href="/bookStore/adminjsps/admin/css/category/add_edit.css">
 <script type="text/javascript"
     src="<c:url value='/jquery/jquery-1.5.1.js'/>"></script>
 <script type="text/javascript">

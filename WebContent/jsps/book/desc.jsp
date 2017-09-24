@@ -6,33 +6,30 @@
 <html>
 <head>
 <title>图书详细</title>
-<meta http-equiv="content-type" content="text/html;charset=utf-8">
-<!--
-	<link rel="stylesheet" type="text/css" href="styles.css">
-	-->
-<link rel="stylesheet" type="text/css"
-    href="<c:url value='/jsps/pager/pager.css'/>" />
-<%-- <script type="text/javascript"
-    src="<c:url value='/jsps/pager/pager.js'/>"></script> --%>
-<script src="<c:url value='/jquery/jquery-1.5.1.js'/>"></script>
-
-<link rel="stylesheet" type="text/css"
-    href="<c:url value='/jsps/css/book/desc.css'/>">
-<script src="<c:url value='/jsps/js/book/desc.js'/>"></script>
+	<meta http-equiv="content-type" content="text/html;charset=utf-8">
+	<!--
+		<link rel="stylesheet" type="text/css" href="styles.css">
+		-->
+	<link rel="stylesheet" type="text/css" href="<c:url value='/jsps/pager/pager.css'/>" />
+	<%-- <script type="text/javascript"
+	    src="<c:url value='/jsps/pager/pager.js'/>"></script> --%>
+	<script src="<c:url value='/jquery/jquery-1.5.1.js'/>"></script>
+	
+	<link rel="stylesheet" type="text/css" href="<c:url value='/jsps/css/book/desc.css'/>">
+	<link rel="stylesheet" type="text/css" href="/jsps/css/evaluate.css">
+	<script src="<c:url value='/jsps/js/book/desc.js'/>"></script>
 </head>
 
 <body>
     <div class="divBookName" style="margin-left: 35px;">${book.bname }</div>
     <div>
-        <img align="top" style="margin-left:35px; margin-top:15px;"
-            src="<c:url value='/${book.image_w }'/>"
-            class="img_image_w" />
+        <img align="top" style="margin-left:35px; margin-top:15px;" src="<c:url value='/${book.image_w }'/>" class="img_image_w" />
         <div class="divBookDesc">
             <ul>
                 <li>商品编号：${book.bid }</li>
                 <li>优思价：<span class="price_n">&yen;${book.currPrice }</span></li>
                 <li>定价：<span class="spanPrice">&yen;${book.price }</span>
-                                           折扣： <span style="color: #c30;">${book.discount }</span>折
+                                                      折扣： <span style="color: #c30;">${book.discount }</span>折
                 </li>
             </ul>
             <hr class="hr1" />
@@ -58,17 +55,43 @@
                 </tr>
             </table>
             <div class="divForm">
-                <form id="form1"
-                    action="<c:url value='/cartItemServlet'/>"
-                    method="post">
+                <form id="form1" action="<c:url value='/cartItemServlet'/>" method="post">
                     <input type="hidden" name="method" value="add" />
                     <input type="hidden" name="bid" value="${book.bid }" />
-                             我要买：<input id="cnt" style="width: 40px; text-align: center;"
-                        type="text" name="quantity" value="1" />件
+                                       我要买：<input id="cnt" style="width: 40px; text-align: center;" type="text" name="quantity" value="1" />件
                 </form>
-                <a id="btn" href="javascript:$('#form1').submit();"></a>
+                <a id="btn"  href="javascript:$('#form1').submit();"></a>
             </div>
         </div>
     </div>
+    
+     <table width="100%" align="center" cellpadding="0" cellspacing="10" class="evaluate" style="margin-left:25px;">
+        <tr align="center" bgcolor="#efeae5">
+            <td align="left" width="px">&nbsp;评价</td>
+        </tr>
+        
+        <c:forEach items="${evaluates}" var="evaluate">
+        	<tr align="center">
+		        <td align="left"> ${evaluate.user.nickname}&nbsp;:&nbsp;&nbsp;&nbsp;
+		        				  ${evaluate.evaluateDesc}<br/>
+		        				  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		        				  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		        				  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		        				  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		        				  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		        				  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		        				  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		        				  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		        				  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		        				  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		        				  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+								  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+								  &nbsp;&nbsp;&nbsp;
+		        				  ${evaluate.evaluateTime}
+		        </td>		            
+		    </tr>		  
+		</c:forEach>            
+    </table>
+    
 </body>
 </html>

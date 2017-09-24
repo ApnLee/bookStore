@@ -22,7 +22,8 @@
                 <c:when test="${order.status eq 2 }">(准备发货)</c:when>
                 <c:when test="${order.status eq 3 }">(等待确认)</c:when>
                 <c:when test="${order.status eq 4 }">(交易成功)</c:when>
-                <c:when test="${order.status eq 5 }">(已取消)</c:when>
+                <c:when test="${order.status eq 5 }">(待评价)</c:when>
+                <c:when test="${order.status eq 6 }">(已取消)</c:when>
             </c:choose>
             </span>
 		　　　下单时间：<span style="color:#CC3300;">${order.ordertime }</span></span>
@@ -30,7 +31,19 @@
 	<div class="divContent">
 		<div class="div2">
 			<dl>
-				<dt>收货人信息</dt>
+				<dt>收货人</dt>
+				<dd>${order.consignee }</dd>
+			</dl>
+		</div>
+		<div class="div2">
+			<dl>
+				<dt>联系方式</dt>
+				<dd>${order.phone }</dd>
+			</dl>
+		</div>
+		<div class="div2">
+			<dl>
+				<dt>收货人地址</dt>
 				<dd>${order.address }</dd>
 			</dl>
 		</div>
@@ -71,15 +84,16 @@
 		<div style="margin: 10px 10px 10px 550px;">
 			<span style="font-weight: 900; font-size: 15px;">合计金额：</span>
 			<span class="price_t">&yen;${order.total }</span><br/>
-<c:if test="${order.status eq 1 }">
-    <a id="pay" href="<c:url value='/orderServlet?method=paymentPre&oid=${order.oid }'/>" class="pay">立即支付</a><br/>
-</c:if>
-<c:if test="${btn eq 'confirm' }">
-    <a id="confirm" href="/yosebook/orderServlet?method=confirm&oid=${order.oid }">确认收货</a>
-</c:if>
-<c:if test="${btn eq 'cancel'}">
-    <a id="cancel" href="/yosebook/orderServlet?method=cancel&oid=${order.oid }">取消订单</a><br/>	
-</c:if>	
+			<c:if test="${order.status eq 1 }">
+			    <a id="pay" href="<c:url value='/orderServlet?method=paymentPre&oid=${order.oid }'/>" class="pay">立即支付</a><br/>
+			</c:if>
+			<c:if test="${btn eq 'confirm' }">
+			    <a id="confirm" href="/bookStore/orderServlet?method=confirm&oid=${order.oid }">确认收货</a>
+			    <a id="confirm" href="/bookStore/orderServlet?method=logisticsTracking&oid=${order.oid }">查看物流</a>
+			</c:if>
+			<c:if test="${btn eq 'cancel'}">
+			    <a id="cancel" href="/bookStore/orderServlet?method=cancel&oid=${order.oid }">取消订单</a><br/>	
+			</c:if>	
 		</div>
 	</div>
 </body>

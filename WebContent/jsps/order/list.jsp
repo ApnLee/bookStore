@@ -49,13 +49,16 @@
                 <td width="115px"><span class="price_t">&yen;${order.total }</span>
                 </td>
                 <td width="142px">
+                
                 <c:choose>
                     <c:when test="${order.status eq 1 }">(等待付款)</c:when>
                     <c:when test="${order.status eq 2 }">(准备发货)</c:when>
                     <c:when test="${order.status eq 3 }">(等待确认)</c:when>
                     <c:when test="${order.status eq 4 }">(交易成功)</c:when>
-                    <c:when test="${order.status eq 5 }">(已取消)</c:when>
+                    <c:when test="${order.status eq 5 }">(待评价)</c:when>  
+                    <c:when test="${order.status eq 6 }">(已取消)</c:when>
                 </c:choose>
+              
                 </td>
                 <td><a href="<c:url value='/orderServlet?method=load&oid=${order.oid }'/>">查看</a><br />
                 <c:if test="${order.status eq 1 }">
@@ -63,10 +66,14 @@
                     <a href="<c:url value='/orderServlet?method=load&oid=${order.oid }&btn=cancel'/>">取消</a><br />
                 </c:if>
                 <c:if test="${order.status eq 3 }">
+                	<a href="<c:url value='/orderServlet?method=logisticsTracking&oid=${order.oid }&btn=confirm'/>">查看物流</a><br />
                     <a href="<c:url value='/orderServlet?method=load&oid=${order.oid }&btn=confirm'/>">确认收货</a><br />
                 </c:if>
+                <c:if test="${order.status eq 5 }">
+                    <a href="<c:url value='/orderServlet?method=evaluateOrder&oid=${order.oid }'/>">评价</a><br />
+                </c:if>
                 </td>
-            </tr>
+           	</tr>
         </c:forEach>    
 
         </table>

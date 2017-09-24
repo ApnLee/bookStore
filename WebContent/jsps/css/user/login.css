@@ -21,11 +21,11 @@ header img.welcome {
 	border: 1px solid #ccc;
 	border-radius: 5px;
 	height: 30px;
-	background: url(/yosebook/images/user.png) no-repeat left center;
+	background: url(/bookStore/images/user.png) no-repeat left center;
 }
 
 #content input.txtUserpwd {
-	background-image: url(/yosebook/images/pwd.png);
+	background-image: url(/bookStore/images/pwd.png);
 }
 
 #content input.txtVerifyCode {
@@ -45,7 +45,7 @@ header img.welcome {
 #btnLogin {
 	width: 307px;
 	height: 34px;
-	background: url(/yosebook/images/login_all_bg.png) no-repeat 0 -95px;
+	background: url(/bookStore/images/login_all_bg.png) no-repeat 0 -95px;
 	border: 0;
 	border-radius: 5px;
 	margin-top: 15px;

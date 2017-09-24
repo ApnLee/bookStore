@@ -55,7 +55,7 @@ function validateLoginpass() {
 			type: "POST",
 			dataType: "json",
 			data: {method: "ajaxValidateLoginpass", loginpass: value},
-			url: "/yosebook/userServlet",
+			url: "/bookStore/userServlet",
 			success: function(flag) {
 				if(!flag) {
 					$("#loginpassError").css("display", "");
@@ -126,7 +126,7 @@ function validateVerifyCode() {
 			type: "POST",
 			dataType: "json",
 			data: {method: "ajaxValidateVerifyCode", verifyCode: value},
-			url: "/yosebook/userServlet",
+			url: "/bookStore/userServlet",
 			success: function(flag) {
 				if(!flag) {
 					$("#verifyCodeError").css("display", "");

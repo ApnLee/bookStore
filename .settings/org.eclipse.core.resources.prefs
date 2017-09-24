@@ -1,2 +1,10 @@
 eclipse.preferences.version=1
+encoding//WebContent/adminjsps=UTF-8
+encoding//WebContent/adminjsps/admin/css/book/main.css=UTF-8
+encoding//WebContent/adminjsps/admin/css/main.css=UTF-8
+encoding//WebContent/jsps/css/book/desc.css=UTF-8
+encoding//WebContent/jsps/css/user/login.css=UTF-8
+encoding//WebContent/jsps/order/logistics.jsp=UTF-8
+encoding//WebContent/jsps/user/user.jsp=UTF-8
 encoding//src/config.properties=UTF-8
+encoding/<project>=UTF-8

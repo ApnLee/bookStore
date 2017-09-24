@@ -67,7 +67,7 @@ function validateLoginname(){
 		return false;
 	}
 	$.ajax({
-		url:"/yosebook/userServlet",
+		url:"/bookStore/userServlet",
 		data:{method:'ajaxValidateLoginname',loginname:value},
 		type:"POST",
 		dataType:"json",
@@ -127,7 +127,7 @@ function validateEmail(){
 		return false;
 	}
 	$.ajax({
-		url:"/yosebook/userServlet",
+		url:"/bookStore/userServlet",
 		data:{method:'ajaxValidateEmail',email:value},
 		type:"POST",
 		dataType:"json",
@@ -157,7 +157,7 @@ function validateVerifyCode(){
 		return false;
 	}
 	$.ajax({
-		url:"/yosebook/userServlet",
+		url:"/bookStore/userServlet",
 		data:{method:'ajaxValidateVerifyCode',verifyCode:value},
 		type:"POST",
 		dataType:"json",

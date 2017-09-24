@@ -116,7 +116,7 @@ footer p {
 </head>
 
 <body>
-    <header> <img src="/yosebook/images/ybig_logo.png">
+    <header> <img src="/bookStore/images/ybig_logo.png">
     <p>管理员登录</p>
     </header>
     <section>
@@ -131,9 +131,6 @@ footer p {
         <input type="submit" value="登录后台" />
     </form>
     </section>
-    <footer>
-        <p>Copyright &copy; 优思网 2013-2016, All Rights Reserved&nbsp;&nbsp;|&nbsp;&nbsp;京ICP证041189号音像制品经营许可证 京音网8号</p>
-        <p><img src="<c:url value='/images/beian.png'/>">&nbsp;&nbsp;<img src="<c:url value='/images/kexin.png'/>"></p>
-    </footer>
+
 </body>
 </html>

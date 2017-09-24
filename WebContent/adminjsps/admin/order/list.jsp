@@ -27,7 +27,8 @@
         | <a href="<c:url value='/adminOrderServlet?method=findByStatus&status=2'/>">已付款</a>
         | <a href="<c:url value='/adminOrderServlet?method=findByStatus&status=3'/>">已发货</a>
         | <a href="<c:url value='/adminOrderServlet?method=findByStatus&status=4'/>">交易成功</a>
-        | <a href="<c:url value='/adminOrderServlet?method=findByStatus&status=5'/>">已取消</a>
+        | <a href="<c:url value='/adminOrderServlet?method=findByStatus&status=5'/>">待评价</a>
+        | <a href="<c:url value='/adminOrderServlet?method=findByStatus&status=6'/>">已取消</a>
     </p>
     <div class="divMain">
         <div class="title">
@@ -65,7 +66,8 @@
                 <c:when test="${order.status eq 2 }">(准备发货)</c:when>
                 <c:when test="${order.status eq 3 }">(等待确认)</c:when>
                 <c:when test="${order.status eq 4 }">(交易成功)</c:when>
-                <c:when test="${order.status eq 5 }">(已取消)</c:when>
+                <c:when test="${order.status eq 5 }">(待评价)</c:when>
+                <c:when test="${order.status eq 6 }">(已取消)</c:when>
             </c:choose>
                 </td>
                 <td>
@@ -75,6 +77,9 @@
             </c:if>
             <c:if test="${order.status eq 2 }">
                 <a href="<c:url value='/adminOrderServlet?method=load&oid=${order.oid }&btn=deliver'/>">发货</a>
+            </c:if>
+             <c:if test="${order.status eq 3 }">
+                <a href="<c:url value='/orderServlet?method=logisticsTracking&oid=${order.oid }&btn=confirm'/>">查看物流</a><br />
             </c:if>
                 </td>
             </tr>

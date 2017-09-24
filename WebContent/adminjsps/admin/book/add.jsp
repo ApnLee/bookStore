@@ -61,7 +61,7 @@ function loadChildren(){
 	var pid = $("#pid").val();
 	$.ajax({
 		type:"POST",
-		url:"/yosebook/adminBookServlet",
+		url:"/bookStore/adminBookServlet",
 		data:{method:"ajaxFindChildren",pid:pid},
 		dataType:"JSON",
 		async:true,
@@ -84,22 +84,22 @@ function loadChildren(){
   <body>
   <div>
    <p style="font-weight: 900; color: red;">${msg }</p>
-   <form action="/yosebook/adminAddBookServlet" enctype="multipart/form-data" method="post" id="form">
+   <form action="/bookStore/adminAddBookServlet" enctype="multipart/form-data" method="post" id="form">
     <div>
 	    <ul>
 	    	<li>书名：　<input id="bname" type="text" name="bname" value="" style="width:500px;"/></li>
 	    	<li>大图：　<input id="image_w" type="file" name="image_w"/></li>
 	    	<li>小图：　<input id="image_b" type="file" name="image_b"/></li>
-	    	<li>当前价：<input id="price" type="text" name="price" value="40.7" style="width:50px;"/></li>
-	    	<li>定价：　<input id="currPrice" type="text" name="currPrice" value="59.0" style="width:50px;"/>
+	    	<li>当前价：<input id="currPrice" type="text" name="currPrice" value="40.7" style="width:50px;"/></li>
+	    	<li>定价：　<input id="price" type="text" name="price" value="59.0" style="width:50px;"/>
             &nbsp;&nbsp; &nbsp;&nbsp;
-	    	折扣：<input id="discount" type="text" name="discount" value="6.9" style="width:30px;"/> 折</li>
+	    	折扣：<input id="discount" type="text" name="discount" value="6.9" style="width:50px;"/> 折</li>
 	    </ul>
 		<hr style="margin-left: 50px; height: 1px; color: #dcdcdc"/>
 		<table>
 			<tr>
 				<td colspan="3">
-					作者：　　<input type="text" id="author" name="author" value="Craig Walls" style="width:150px;"/>
+					作者：　　<input type="text" id="author" name="author" value="Craig Walls" style="width:250px;"/>
 				</td>
 			</tr>
 			<tr>
@@ -108,16 +108,16 @@ function loadChildren(){
 				</td>
 			</tr>
 			<tr>
-				<td colspan="3">出版时间：<input type="text" id="publishtime" name="publishtime" value="2013-6-1" style="width:100px;"/></td>
+				<td colspan="3">出版时间：<input type="text" id="publishtime" name="publishtime" value="2013年6月" style="width:100px;"/></td>
 			</tr>
 			<tr>
 				<td>版次：　　<input type="text" name="edition" id="edition" value="1" style="width:40px;"/></td>
-				<td>页数：　　<input type="text" name="pageNum" id="pageNum" value="374" style="width:50px;"/></td>
-				<td>字数：　　<input type="text" name="wordNum" id="wordNum" value="48700" style="width:80px;"/></td>
+				<td>页数：　　<input type="text" name="pageNum" id="pageNum" value="" style="width:50px;"/></td>
+				<td>字数：　　<input type="text" name="wordNum" id="wordNum" value="" style="width:80px;"/></td>
 			</tr>
 			<tr>
-				<td width="250">印刷时间：<input type="text" name="printtime" id="printtime" value="2013-6-1" style="width:100px;"/></td>
-				<td width="250">开本：　　<input type="text" name="booksize" id="booksize" value="16" style="width:30px;"/></td>
+				<td width="250">印刷时间：<input type="text" name="printtime" id="printtime" value="2013年6月1日" style="width:150px;"/></td>
+				<td width="250">开本：　　<input type="text" name="booksize" id="booksize" value="16" style="width:50px;"/></td>
 				<td>纸张：　　<input type="text" name="paper" id="paper" value="胶版纸" style="width:80px;"/></td>
 			</tr>
 			<tr>

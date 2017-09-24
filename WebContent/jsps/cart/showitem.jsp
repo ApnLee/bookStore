@@ -37,8 +37,7 @@
 </head>
 
 <body>
-    <form id="form1" action="<c:url value='/orderServlet'/>"
-        method="post">
+    <form id="form1" action="<c:url value='/orderServlet'/>" method="post">
         <input type="hidden" name="cartItemIds" value="${cartItemIds }" />
         <input type="hidden" name="method" value="createOrder" />
         <table width="95%" align="center" cellpadding="0" cellspacing="0">
@@ -55,40 +54,48 @@
             </tr>
         <c:forEach items="${cartItems }" var="cartItem">
             <tr align="center">
-                <td align="right"><a class="linkImage"
-                    href="<c:url value='/jsps/book/desc.jsp'/>"><img
-                        border="0" width="54" align="top"
-                        src="<c:url value='/${cartItem.book.image_b }'/>" /></a>
+                <td align="right"><a class="linkImage" href="<c:url value='/jsps/book/desc.jsp'/>">
+                    <img border="0" width="54" align="top" src="<c:url value='/${cartItem.book.image_b }'/>" /></a>
                 </td>
-                <td align="left"><a
-                    href="<c:url value='/jsps/book/desc.jsp'/>"><span>${cartItem.book.bname }</span></a></td>
+                <td align="left"><a href="<c:url value='/jsps/book/desc.jsp'/>"><span>${cartItem.book.bname }</span></a></td>
                 <td>&yen;${cartItem.book.currPrice }</td>
                 <td>${cartItem.quantity }</td>
-                <td><span class="price_n">&yen;<span
-                        class="subtotal">${cartItem.subtotal }</span></span></td>
+                <td><span class="price_n">&yen;<span class="subtotal">${cartItem.subtotal }</span></span></td>
             </tr>
         </c:forEach>
             
             <tr>
-                <td colspan="6" align="right"><span>总计：</span><span
-                    class="price_t">&yen;<span id="total">${total }</span></span>
+                <td colspan="6" align="right"><span>总计：</span>
+                <span class="price_t">&yen;<span id="total">${total }</span></span>
                 </td>
             </tr>
             <tr>
-                <td colspan="5" bgcolor="#efeae5"><span
-                    style="font-weight: 900">收货地址</span></td>
+                <td colspan="5" bgcolor="#efeae5"><span style="font-weight: 900">收货人</span></td>
             </tr>
             <tr>
                 <td colspan="6">
-                <input id="addr" type="text" name="address"
-                 style="font-family: 'microsoft yahei';"
-                 value="山西省 太原市 万柏林区 太原科技大学  李某某" />
+                <input id="addr" type="text" name="consignee" style="font-family: 'microsoft yahei';" value="李某某" />
+                </td>
+            </tr>
+             <tr>
+                <td colspan="5" bgcolor="#efeae5"><span style="font-weight: 900">联系方式</span></td>
+            </tr>
+            <tr>
+                <td colspan="6">
+                <input id="addr" type="text" name="phone" style="font-family: 'microsoft yahei';" value="13000000001" />
                 </td>
             </tr>
             <tr>
-                <td style="border-top-width: 4px;" colspan="5"
-                    align="right"><a id="linkSubmit"
-                    href="javascript:$('#form1').submit();">提交订单</a></td>
+                <td colspan="5" bgcolor="#efeae5"><span style="font-weight: 900">收货地址</span></td>
+            </tr>
+            <tr>
+                <td colspan="6">
+                <input id="addr" type="text" name="address" style="font-family: 'microsoft yahei';" value="湖南省湘潭市雨湖区湖南科技大学" />
+                </td>
+            </tr>
+            <tr>
+                <td style="border-top-width: 4px;" colspan="5" align="right">
+                <a id="linkSubmit" href="javascript:$('#form1').submit();">提交订单</a></td>
             </tr>
         </table>
     </form>

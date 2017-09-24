@@ -59,16 +59,16 @@
                     </tr>
                     <!-- <tr>
                         <td align="right"></td>
-                        <td><img id="vCode" src="/yosebook/verifyCode" title="点击更换" 
-                        onclick="this.setAttribute('src','/yosebook/verifyCode?'+Math.random());"/>
+                        <td><img id="vCode" src="/bookStore/verifyCode" title="点击更换" 
+                        onclick="this.setAttribute('src','/bookStore/verifyCode?'+Math.random());"/>
                          <a href="javascript:_change();">看不清，换一张</a></td>
                     </tr> -->
                     <tr>
                         <td align="right" class="textTd">验证码：</td>
                         <td class="inputTd"><input class="input" type="text"
                             name="verifyCode" id="verifyCode" value="" />
-                            <img id="vCode" src="/yosebook/verifyCode" title="点击更换"
-                        onclick="this.setAttribute('src','/yosebook/verifyCode?'+Math.random());"/>
+                            <img id="vCode" src="/bookStore/verifyCode" title="点击更换"
+                        onclick="this.setAttribute('src','/bookStore/verifyCode?'+Math.random());"/>
                             </td>
                         <td><label id="verifyCodeError" class="error"></label></td>
                     </tr>

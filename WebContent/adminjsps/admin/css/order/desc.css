@@ -69,7 +69,7 @@ dt {
 }
 .title {
 	border: 1px solid #d0d0d0;
-	background: url(/yosebook/images/bg_btns.png) repeat-x;
+	background: url(/bookStore/images/bg_btns.png) repeat-x;
 	background-position: 0 -132px;
 	margin-left: 2px;
 	height: 30px;
@@ -85,7 +85,7 @@ td .bookname {
 }
 
 .pay {
-	background: url(/yosebook/images/sprites_orderdetails.gif) no-repeat;
+	background: url(/bookStore/images/sprites_orderdetails.gif) no-repeat;
 	display: inline-block;
 	background-position: 0 -200px;
 	height: 34px;
@@ -115,7 +115,7 @@ a {
 }
 
 #confirm {
-	background: url(/yosebook/images/confirm.jpg) no-repeat;
+	background: url(/bookStore/images/confirm.jpg) no-repeat;
 	display: inline-block;
 	height: 34px;
 	width: 142px;

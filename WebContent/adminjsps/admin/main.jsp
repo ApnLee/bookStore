@@ -5,7 +5,7 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
 <head>
-<title>main.jsp</title>
+<title>商城后台首页</title>
 <meta http-equiv="content-type" content="text/html;charset=utf-8">
 <!--
 	<link rel="stylesheet" type="text/css" href="styles.css">

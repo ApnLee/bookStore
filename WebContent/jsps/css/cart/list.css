@@ -47,7 +47,7 @@ input[type="checkbox"]:hover{
 }
 
 .jiesuan {
-	background: url(/yosebook/images/icon.png) no-repeat;
+	background: url(/bookStore/images/icon.png) no-repeat;
 	display: inline-block;
 	background-position: 0 -35px;
 	height: 40px;
@@ -57,7 +57,7 @@ input[type="checkbox"]:hover{
 }
 
 .kill {
-	background: url(/yosebook/images/icon.png) no-repeat;
+	background: url(/bookStore/images/icon.png) no-repeat;
 	display: inline-block;
 	background-position: 0 -480px;
 	height: 40px;
@@ -65,7 +65,7 @@ input[type="checkbox"]:hover{
 }
 
 .jiesuan:HOVER {
-	background: url(/yosebook/images/icon.png) no-repeat;
+	background: url(/bookStore/images/icon.png) no-repeat;
 	display: inline-block;
 	background-position: 0 -75px;
 	height: 40px;

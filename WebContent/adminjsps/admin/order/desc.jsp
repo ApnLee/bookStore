@@ -30,7 +30,19 @@
 	<div class="divRow">
 		<div class="divContent">
 			<dl>
-				<dt>收货人信息</dt>
+				<dt>收货人</dt>
+				<dd>${order.consignee }</dd>
+			</dl>
+		</div>
+		<div class="divContent">
+			<dl>
+				<dt>联系方式</dt>
+				<dd>${order.phone }</dd>
+			</dl>
+		</div>
+		<div class="divContent">
+			<dl>
+				<dt>收货人地址</dt>
 				<dd>${order.address }</dd>
 			</dl>
 		</div>
@@ -73,10 +85,10 @@
 			<span class="spanTotal">合　　计：</span>
 			<span class="price_t">&yen;${order.total }</span><br/>
 <c:if test="${order.status eq 2 and btn eq 'deliver'}">
-	<a id="deliver" href="/yosebook/adminOrderServlet?method=deliver&oid=${order.oid }">发　　货</a>
+	<a id="deliver" href="/bookStore/adminOrderServlet?method=deliver&oid=${order.oid }">发　　货</a>
 </c:if>
 <c:if test="${order.status eq 1 and btn eq 'cancel'}">
-	<a id="cancel" href="/yosebook/adminOrderServlet?method=cancel&oid=${order.oid }">取　　消</a>
+	<a id="cancel" href="/bookStore/adminOrderServlet?method=cancel&oid=${order.oid }">取　　消</a>
 </c:if>
 		</div>
 	</div>

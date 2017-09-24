@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" id="WebApp_ID" version="2.5">
-  <display-name>yosebook</display-name>
+  <display-name>bookStore</display-name>
   <welcome-file-list>
     <welcome-file>index.jsp</welcome-file>
   </welcome-file-list>
   <filter>
     <filter-name>EncodingFilter</filter-name>
-    <filter-class>com.tyust.filter.EncodingFilter</filter-class>
+    <filter-class>com.bookstore.filter.EncodingFilter</filter-class>
     <init-param>
       <param-name>charset</param-name>
       <param-value>UTF-8</param-value>
@@ -18,7 +18,7 @@
   </filter-mapping>
   <servlet>
     <servlet-name>VerifyCode</servlet-name>
-    <servlet-class>com.tyust.vcode.servlet.VerifyCodeServlet</servlet-class>
+    <servlet-class>com.bookstore.utils.vcode.servlet.VerifyCodeServlet</servlet-class>
   </servlet>
   <servlet-mapping>
     <servlet-name>VerifyCode</servlet-name>
@@ -26,7 +26,7 @@
   </servlet-mapping>
   <servlet>
     <servlet-name>UserServlet</servlet-name>
-    <servlet-class>com.tyust.user.web.UserServlet</servlet-class>
+    <servlet-class>com.bookstore.servlet.UserServlet</servlet-class>
   </servlet>
   <servlet-mapping>
     <servlet-name>UserServlet</servlet-name>
@@ -34,7 +34,7 @@
   </servlet-mapping>
   <servlet>
     <servlet-name>CategoryServlet</servlet-name>
-    <servlet-class>com.tyust.category.web.CategoryServlet</servlet-class>
+    <servlet-class>com.bookstore.servlet.CategoryServlet</servlet-class>
   </servlet>
   <servlet-mapping>
     <servlet-name>CategoryServlet</servlet-name>
@@ -42,7 +42,7 @@
   </servlet-mapping>
   <servlet>
     <servlet-name>BookServlet</servlet-name>
-    <servlet-class>com.tyust.book.web.BookServlet</servlet-class>
+    <servlet-class>com.bookstore.servlet.BookServlet</servlet-class>
   </servlet>
   <servlet-mapping>
     <servlet-name>BookServlet</servlet-name>
@@ -50,7 +50,7 @@
   </servlet-mapping>
   <servlet>
     <servlet-name>CartItemServlet</servlet-name>
-    <servlet-class>com.tyust.cart.web.CartItemServlet</servlet-class>
+    <servlet-class>com.bookstore.servlet.CartItemServlet</servlet-class>
   </servlet>
   <servlet-mapping>
     <servlet-name>CartItemServlet</servlet-name>
@@ -58,7 +58,7 @@
   </servlet-mapping>
   <servlet>
     <servlet-name>OrderServlet</servlet-name>
-    <servlet-class>com.tyust.order.web.OrderServlet</servlet-class>
+    <servlet-class>com.bookstore.servlet.OrderServlet</servlet-class>
   </servlet>
   <servlet-mapping>
     <servlet-name>OrderServlet</servlet-name>
@@ -66,16 +66,15 @@
   </servlet-mapping>
   <servlet>
     <servlet-name>AdminServlet</servlet-name>
-    <servlet-class>com.tyust.admin.admin.web.AdminServlet</servlet-class>
+    <servlet-class>com.bookstore.servlet.AdminServlet</servlet-class>
   </servlet>
   <servlet-mapping>
     <servlet-name>AdminServlet</servlet-name>
     <url-pattern>/adminServlet</url-pattern>
   </servlet-mapping>
-  
   <filter>
     <filter-name>LoginFilter</filter-name>
-    <filter-class>com.tyust.filter.LoginFilter</filter-class>
+    <filter-class>com.bookstore.filter.LoginFilter</filter-class>
   </filter>
   <filter-mapping>
     <filter-name>LoginFilter</filter-name>
@@ -101,7 +100,7 @@
     <description></description>
     <display-name>AdminCategoryServlet</display-name>
     <servlet-name>AdminCategoryServlet</servlet-name>
-    <servlet-class>com.tyust.admin.category.AdminCategoryServlet</servlet-class>
+    <servlet-class>com.bookstore.servlet.AdminCategoryServlet</servlet-class>
   </servlet>
   <servlet-mapping>
     <servlet-name>AdminCategoryServlet</servlet-name>
@@ -111,7 +110,7 @@
     <description></description>
     <display-name>AdminBookServlet</display-name>
     <servlet-name>AdminBookServlet</servlet-name>
-    <servlet-class>com.tyust.admin.book.AdminBookServlet</servlet-class>
+    <servlet-class>com.bookstore.servlet.AdminBookServlet</servlet-class>
   </servlet>
   <servlet-mapping>
     <servlet-name>AdminBookServlet</servlet-name>
@@ -121,7 +120,7 @@
     <description></description>
     <display-name>AdminAddBookServlet</display-name>
     <servlet-name>AdminAddBookServlet</servlet-name>
-    <servlet-class>com.tyust.admin.book.AdminAddBookServlet</servlet-class>
+    <servlet-class>com.bookstore.servlet.AdminAddBookServlet</servlet-class>
   </servlet>
   <servlet-mapping>
     <servlet-name>AdminAddBookServlet</servlet-name>
@@ -131,17 +130,16 @@
     <description></description>
     <display-name>AdminOrderServlet</display-name>
     <servlet-name>AdminOrderServlet</servlet-name>
-    <servlet-class>com.tyust.admin.order.AdminOrderServlet</servlet-class>
+    <servlet-class>com.bookstore.servlet.AdminOrderServlet</servlet-class>
   </servlet>
   <servlet-mapping>
     <servlet-name>AdminOrderServlet</servlet-name>
     <url-pattern>/adminOrderServlet</url-pattern>
   </servlet-mapping>
-  
   <filter>
     <display-name>AdminLoginFilter</display-name>
     <filter-name>AdminLoginFilter</filter-name>
-    <filter-class>com.tyust.admin.filter.AdminLoginFilter</filter-class>
+    <filter-class>com.bookstore.filter.AdminLoginFilter</filter-class>
   </filter>
   <filter-mapping>
     <filter-name>AdminLoginFilter</filter-name>
@@ -163,4 +161,14 @@
     <filter-name>AdminLoginFilter</filter-name>
     <url-pattern>/adminjsps/admin/*</url-pattern>
   </filter-mapping>
+  <servlet>
+    <description></description>
+    <display-name>EvaluateServlet</display-name>
+    <servlet-name>EvaluateServlet</servlet-name>
+    <servlet-class>com.bookstore.servlet.EvaluateServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>EvaluateServlet</servlet-name>
+    <url-pattern>/EvaluateServlet</url-pattern>
+  </servlet-mapping>
 </web-app>

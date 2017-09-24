@@ -37,6 +37,6 @@
         <a href="<c:url value='/adminBookServlet?method=addPre'/>">添加图书</a>
         <a href="<c:url value='/adminjsps/admin/book/gj.jsp'/>">高级搜索</a>
     </p>
-    <img src="/yosebook/images/ybig_logo.png">
+    <img src="/bookStore/images/ybig_logo.png">
 </body>
 </html>

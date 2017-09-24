@@ -46,7 +46,7 @@
 			var quantity = $("#"+id+"Quantity").val();
 			if(quantity==1){
 				if(confirm("您是否真要删除该条目？")){
-					location = "/yosebook/cartItemServlet?method=batchDelete&cartItemIds="+id;
+					location = "/bookStore/cartItemServlet?method=batchDelete&cartItemIds="+id;
 				}
 			}else{
 				sendUpdateQuantity(id,Number(quantity)-1);
@@ -63,7 +63,7 @@
 		$.ajax({
 			async:false,
 			cache:false,
-			url:"/yosebook/cartItemServlet",
+			url:"/bookStore/cartItemServlet",
 			data:{method:"updateQuantity",cartItemId:id,quantity:quantity},
 			type:"POST",
 			dataType:"json",
@@ -117,7 +117,7 @@
 		$(":checkbox[name=checkboxBtn][checked=true]").each(function(){
 			cartItemIdArray.push($(this).val());
 		});
-		location="/yosebook/cartItemServlet?method=batchDelete&cartItemIds="+cartItemIdArray;
+		location="/bookStore/cartItemServlet?method=batchDelete&cartItemIds="+cartItemIdArray;
 	}
 	/*结算方法*/
 	function jiesuan(){
@@ -190,8 +190,8 @@
         <tr>
             <td colspan="4" class="tdBatchDelete"><a
                 href="javascript:batchDelete();">批量删除</a></td>
-            <td colspan="3" align="right" class="tdTotal"><span>总计：</span><span
-                class="price_t">&yen;<span id="total"></span></span></td>
+            <td colspan="3" align="right" class="tdTotal"><span>总计：</span>
+            <span class="price_t">&yen;<span id="total"></span></span></td>
         </tr>
         <tr>
             <td colspan="7" align="right">

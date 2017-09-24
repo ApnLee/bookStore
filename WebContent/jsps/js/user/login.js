@@ -14,7 +14,7 @@ $(function() {
 	/*
 	 * 2. 给注册按钮添加submit()事件，完成表单校验
 	 */
-	/*$("#btnLogin").submit(function(){
+	$("#btnLogin").submit(function(){
 		$("#msg").text("");
 		var bool = true;
 		$(".input").each(function() {
@@ -24,7 +24,7 @@ $(function() {
 			}
 		});
 		return bool;
-	});*/
+	});
 	
 	/*
 	 * 3. 输入框得到焦点时隐藏错误信息
@@ -113,7 +113,7 @@ function validateVerifyCode() {
 			type: "POST",
 			dataType: "json",
 			data: {method: "ajaxValidateVerifyCode", verifyCode: value},
-			url: "/yosebook/userServlet",
+			url: "/bookStore/userServlet",
 			success: function(flag) {
 				if(!flag) {
 					$("#verifyCodeError").css("display", "");

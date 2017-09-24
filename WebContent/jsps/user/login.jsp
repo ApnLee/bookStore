@@ -53,8 +53,8 @@
 				<tr>
 					<td>
 						<input type="text" class="txtVerifyCode input" placeholder="验证码" name="verifyCode" id="verifyCode" value="${user.verifyCode }">
-						<img id="vCode" src="/yosebook/verifyCode" title="点击更换" 
-                        onclick="this.setAttribute('src','/yosebook/verifyCode?'+Math.random());"/>
+						<img id="vCode" src="/bookStore/verifyCode" title="点击更换" 
+                        onclick="this.setAttribute('src','/bookStore/verifyCode?'+Math.random());"/>
 					</td>
 				</tr>
 				<tr>
@@ -66,7 +66,7 @@
 						<label for="chkAuto" class="lbAuto">自动登录</label>
 						<!-- <input type="checkbox" id="chkSafe" name="forgetPwd"> -->
 						&nbsp;&nbsp;&nbsp;&nbsp;
-                        <a href="#" class="forgetPwd">忘记密码?</a>
+                        <!-- <a href="#" class="forgetPwd">忘记密码?</a> -->
 					</td>
 				</tr>
 				<tr>				
@@ -83,9 +83,5 @@
 		</form>
 	  </div>
 	</section>
-	<footer>
-		<p>Copyright &copy; 优思网 2013-2016, All Rights Reserved&nbsp;&nbsp;|&nbsp;&nbsp;京ICP证041189号音像制品经营许可证 京音网8号</p>
-		<p><img src="<c:url value='/images/beian.png'/>">&nbsp;&nbsp;<img src="<c:url value='/images/kexin.png'/>"></p>
-	</footer>
  </body>
 </html>

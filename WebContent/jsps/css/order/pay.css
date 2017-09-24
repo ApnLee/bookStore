@@ -59,7 +59,7 @@ input[type="radio"]:hover{
 	cursor: pointer;
 }
 .linkNext {
-	background: url(/yosebook/images/icon2.png) no-repeat;
+	background: url(/bookStore/images/icon2.png) no-repeat;
 	display: inline-block;
 	background-position: 0 -35px;
 	height: 40px;
@@ -75,7 +75,7 @@ input[type="radio"]:hover{
 }
 
 .linkNext:HOVER {
-	background: url(/yosebook/images/icon2.png) no-repeat;
+	background: url(/bookStore/images/icon2.png) no-repeat;
 	display: inline-block;
 	background-position: 0 -75px;
 	height: 40px;

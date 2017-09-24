@@ -82,8 +82,8 @@
                         <tr>
                             <td>&nbsp;</td>
                             <td><span class="verifyCodeImg"><img
-                                    id="vCode" width="100" title="点击更换" src="/yosebook/verifyCode"
-                                    onclick="this.setAttribute('src','/yosebook/verifyCode?'+Math.random());"></span></td>
+                                    id="vCode" width="100" title="点击更换" src="/bookStore/verifyCode"
+                                    onclick="this.setAttribute('src','/bookStore/verifyCode?'+Math.random());"></span></td>
                             <td></td>
                         </tr>
                         <tr>
@@ -91,7 +91,8 @@
                             <td><%-- <input type="image"
                                 src="<c:url value='/images/regist1.jpg'/>"
                                 id="submit" /> --%>
-                                <input type="submit" id="submitBtn" value="" class="btnRegist">
+                                <input type="image"
+                                src="<c:url value='/images/regist1.jpg'/>" id="submitBtn" value="" class="btnRegist">
                             </td>   
                             <td><a class="alreadyHave" href="<c:url value='/jsps/user/login.jsp'/>">已有账号？</a></td>
                         </tr>
@@ -100,9 +101,5 @@
             </div>
         </div>
     </section>
-    <footer>
-        <p>Copyright &copy; 优思网 2013-2016, All Rights Reserved&nbsp;&nbsp;|&nbsp;&nbsp;京ICP证041189号音像制品经营许可证 京音网8号</p>
-        <p><img src="<c:url value='/images/beian.png'/>">&nbsp;&nbsp;<img src="<c:url value='/images/kexin.png'/>"></p>
-    </footer>
 </body>
 </html>

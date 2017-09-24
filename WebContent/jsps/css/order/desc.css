@@ -68,7 +68,7 @@ dt {
 
 .title {
 	border: 1px solid #d0d0d0;
-	background: url(/yosebook/images/bg_btns.png) repeat-x;
+	background: url(/bookStore/images/bg_btns.png) repeat-x;
 	background-position: 0 -132px;
 	margin-left: 2px;
 	height: 30px;
@@ -120,7 +120,7 @@ a {
 }
 
 #confirm {
-	/* background: url(/yosebook/images/confirm.jpg) no-repeat; */
+	/* background: url(/bookStore/images/confirm.jpg) no-repeat; */
 	background: #15B695;
 	display: inline-block;
 	height: 30px;

@@ -11,7 +11,7 @@ body {
 	height: 30px;
 	width: 880px;
 	border: 1px #d0d0d0 solid;
-	/* background: url('/yosebook/images/bg_btns.png'); */
+	/* background: url('/bookStore/images/bg_btns.png'); */
 	/* background-position: 0px -132px; */
 	line-height: 30px;
 	border-radius: 3px;
@@ -64,7 +64,7 @@ table {
 	/* border: 1px #ffb8b8 solid;
 	border-radius:3px; */
 	padding: 6px 8px 6px 35px;
-	background: url('/yosebook/images/error.png') no-repeat;
+	background: url('/bookStore/images/error.png') no-repeat;
 	/* background-color: #fef2f2; */
 }
 
@@ -94,10 +94,10 @@ table {
 	width: 244px;
 	height: 34px;
 	border:0;
-	background: url('/yosebook/images/regist1.jpg') no-repeat;
+	background: url('/bookStore/images/regist1.jpg') no-repeat;
 }
 .btnRegist:hover{
-	background: url('/yosebook/images/regist2.jpg') no-repeat;
+	background: url('/bookStore/images/regist2.jpg') no-repeat;
 	cursor:pointer;
 }
 header img.welcome_reg {

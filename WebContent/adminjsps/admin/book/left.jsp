@@ -5,7 +5,7 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
   <head>
-    <title>My JSP 'left.jsp' starting page</title>
+    <title>left.jsp</title>
 	<!--
 	<link rel="stylesheet" type="text/css" href="styles.css">
 	-->
@@ -26,12 +26,12 @@
 		/*
 		1. 程序设计：一级分类名称
 		2. Java Javascript：二级分类名称
-		3. /yosebook/jsps/book/list.jsp：点击二级分类后链接到的URL
+		3. /bookStore/jsps/book/list.jsp：点击二级分类后链接到的URL
 		4. body:链接的内容在哪个框架页中显示
 		*/
 		<c:forEach items="${parents}" var="parent">
     		<c:forEach items="${parent.children}" var="child">
-				bar.add("${parent.cname}", "${child.cname}", "/yosebook/adminBookServlet?method=findByCategory&cid=${child.cid}", "body");
+				bar.add("${parent.cname}", "${child.cname}", "/bookStore/adminBookServlet?method=findByCategory&cid=${child.cid}", "body");
     		</c:forEach>
 		</c:forEach>
 		$("#menu").html(bar.toString());
